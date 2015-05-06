@@ -1,0 +1,1 @@
+<?= "scgis app works"; ?>
