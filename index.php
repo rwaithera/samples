@@ -1,1 +1,1 @@
-<?= "scgis app works"; ?>
+<?= "this is the index file of the scgis project"; ?>
