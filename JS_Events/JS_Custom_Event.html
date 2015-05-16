@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+    
+<html>
+
+    <head>
+        <script type="text/javascript">
+            var eventObject = new CustomEvent(
+                "customEvent",
+                {
+                    info:
+                    {
+                        message: "Hi There!",
+                        time: new Date()  
+                    },
+                    bubbles: true,
+                    cancelable: true
+                }
+                );
+            
+            
+            function addListener(){
+                var info = document.getElementById("info");
+            
+                info.addEventListener("customEvent", handler, false);            
+            }
+            
+            function fireEvent() {
+                var info = document.getElementById("info");
+                
+                info.dispatchEvent(eventObject);
+            }
+                          
+            function handler(e){
+                var info = document.getElementById("info");
+                var event = document.getElementById("event");
+                info.innerHTML = "Hi there! The time is: "+Date().toLocaleString();
+                event.innerHTML = "Hi there! The time is: "+e.info.time.toLocaleString();
+            }
+        
+        </script>
+    </head>
+    
+    <body onload="addListener()">
+        <button onclick="fireEvent()"> click me </button>
+        <div id="info"></div>
+        <div id="event"></div>
+    </body>
+
+</html>
