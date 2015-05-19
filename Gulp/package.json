@@ -1,0 +1,23 @@
+{
+  "name": "sample",
+  "version": "3.8.11",
+  "description": "gulp 3.8.11 installed",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rwaithera/samples.git"
+  },
+  "author": "Ruth Waithera",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rwaithera/samples/issues"
+  },
+  "homepage": "https://github.com/rwaithera/samples#readme",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-minify-css": "^1.1.1"
+  }
+}
