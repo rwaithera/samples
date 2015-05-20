@@ -1,0 +1,57 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+    <head> 
+        <title>AngularJS Simple Sample</title>             
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+       
+        <script src="js/libs/angular.min.js"></script>        
+
+        <script src="js/app.js"></script> 
+
+    </head> 
+    
+    <body  ng-app="app" ng-controller="formController" > 
+        
+        <form name="myForm" novalidate>
+            <input type="hidden" name="id" ng-model="user.id">
+            <!-- FIRST NAME -->
+            <div class="form-group">
+                <label>First Name</label>
+                <input type="text" name="fname" ng-model="user.fname" ng-required>
+            </div>
+
+            <!-- LAST NAME -->
+            <div>
+                <label>Last Name</label>
+                <input type="text" name="lname" ng-model="user.lname" ng-required>
+            </div>
+
+            <!-- TELEPHONE -->
+            <div>
+                <label>Telephone</label>
+                <input type="tel" name="tel" ng-model="user.tel" required>
+            </div>
+
+            <!-- SUBMIT BUTTON -->
+            <input type="submit" ng-click="save(user)" value="Save">
+            <button value="New" ng-click="add()">New</button>
+
+        </form>            
+        
+        
+        
+        <table border="1px solid black" width="700px">
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Telephone</th>
+            <th></th>
+            <tr ng-repeat="item in table">
+                <td>{{ item.fname }}</td>
+                <td>{{ item.lname }}</td>
+                <td>{{ item.tel }}</td>
+                <td><button value="delete" ng-click="delete(item.fname, item.lname)">Delete</button></td>
+            </tr>
+        </table>
+    </body> 
+</html> 
