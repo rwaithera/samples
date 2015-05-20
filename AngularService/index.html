@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Angular Service</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        
+        <script src="js/libs/angular.min.js"></script>        
+
+        <script src="js/app.js"></script> 
+    </head>
+    <body>
+        <div ng-app="app" class="container">
+            <div class="panel panel-default">
+                <div class="panel-heading">Services Sample</div>
+                <div class="panel-body">Click the buttons to do some calculations</div>
+            </div>
+            <div ng-controller="ExpController" >
+                <div class="row">
+                    <div class="col-md-3">Enter a number</div>
+                    <div class="col-md-3">Square</div>
+                    <div class="col-md-3">Cube</div>
+                    <div class="col-md-3">Answer</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3"><input type="number" ng-model="number"/></div>
+                    <div class="col-md-3"><button type="button" class="btn btn-primary btn-md" ng-click="Square()">X<sup>2</sup></button></div>
+                    <div class="col-md-3"><button type="button" class="btn btn-primary btn-md" ng-click="Cube()">X<sup>3</sup></button></div>
+
+                    <div class="col-xs-12 col-sm-4 col-md-3"><div>{{answer}}</div></div>
+                </div>
+            </div>
+            
+            <br><br>
+            
+            <div ng-controller="MathController">
+                <div class="row">
+                    <div class="col-md-3">Enter first number</div>
+                    <div class="col-md-3">Enter second number</div>
+                    <div class="col-md-3">Operations</div>
+                    <div class="col-md-3">Answer</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3"><input type="number" ng-model="a" /></div>
+                    <div class="col-md-3"><input type="number" ng-model="b" /></div>
+                    <div class="col-md-3">
+                        <div class="col col-md-3"><button type="button" class="btn btn-primary btn-md" ng-click="Add()">+</button></div>
+                        <div class="col col-md-3"><button type="button" class="btn btn-primary btn-md" ng-click="Subtract()">-</button></div>
+                        <div class="col col-md-3"><button type="button" class="btn btn-primary btn-md" ng-click="Multiply()">*</button></div>
+                        <div class="col col-md-3"><button type="button" class="btn btn-primary btn-md" ng-click="Divide()">/</button></div>
+                    </div>
+                    <div class="col-md-3"><div>{{answer}}</div></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
