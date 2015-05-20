@@ -24,12 +24,8 @@ function formController($scope){
         $scope.user = {};
     }
     
-    $scope.delete = function(fname,lname){
-        for (i in $scope.table){
-            if($scope.table[i].fname==fname && $scope.table[i].lname==lname){
-                    $scope.table.splice(i,1);
-            }
-        }
+    $scope.delete = function(index){
+        $scope.table.splice(index,1);
     }
     
 }

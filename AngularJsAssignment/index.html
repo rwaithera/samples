@@ -50,7 +50,7 @@
                 <td>{{ item.fname }}</td>
                 <td>{{ item.lname }}</td>
                 <td>{{ item.tel }}</td>
-                <td><button value="delete" ng-click="delete(item.fname, item.lname)">Delete</button></td>
+                <td><button value="delete" ng-click="delete($index)">Delete</button></td>
             </tr>
         </table>
     </body> 
