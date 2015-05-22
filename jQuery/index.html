@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Add/ Delete Row</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        
+        <script src="js/jquery-2.1.4.min.js"></script>
+        
+        <script>
+            $(document).ready(function(){
+              $("#add").click(function(){
+                $('#tbl tr').last().after('<tr><td><input type="text" name="fname" placeholder="Enter First Name"></td>'+
+                        '<td><input type="text" name="lname" placeholder="Enter Last Name"></td>'+
+                        '<td><input type="tel" name="tel" placeholder="Enter Telephone"></td></tr>');
+         });
+
+              $("#rem").click(function(){
+                if($('#tbl tr').size()>1){
+                  $('#tbl tr:last-child').remove();
+                }else{
+                  alert('One row should be present in table');
+                }
+              });
+
+            });
+        </script>
+    </head>
+
+    <body>
+        <div class="container">
+            
+            <div class="panel panel-default">
+                <div class="panel-heading">jQuery add Row Sample</div>
+                <div class="panel-body">Click button to add a row or to delete a row</div>
+            </div>
+            
+            <button class="btn-primary btn-lg"  id="add">Add Row</button>
+            <button class="btn-primary btn-lg" id="rem">Remove Row</button>
+            <br><br>
+
+            <table id="tbl">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Telephone</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text" name="fname" placeholder="Enter First Name"></td>
+                        <td><input type="text" name="lname" placeholder="Enter Last Name"></td>
+                        <td><input type="tel" name="tel" placeholder="Enter Telephone"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+
+</html>
